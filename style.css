@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania");
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("fonts/Booter\ -\ Zero\ Zero.ttf") format("ttf"),
+        url("fonts/Booter\ -\ Zero\ One.ttf") format("tff");
+        /*if browser cannot find first source it will go to second*/
+        font-weight: normal;
+        font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    /*what this does is size of the elements determined by the padding and margin 
+    as well as the actual size of the content....so if we had a box and we set he width to be 200 pxs and padding to be 20px
+    without border box the width of that objects would be 200px wide plus 20pxs on the right for padding and 20 px on the left for padding
+    making it 240px for padding. with border box though width attribute takes into account padding as well.
+    so if we set an element to be 200px width our elements will be exactly 200pxs wide 
+    and the padding will be inside those elements */ 
+    font-family: Raleway;
+    color: #777;/*light gray*/
+}
+html, body{
+    margin:0;
+    padding:0;
+}/*for the white space across the margins*/
+.nav ul {
+    margin:0;
+    /*ul element have a default margin on all sides*/
+    /*nav class will constraint the ul spefied and not all ul*/
+}
+.nav li{
+    display : inline;/*same line*/
+}
+.nav a{
+    /*style our links*/
+    display: inline-block;
+    padding: .5em;/*space out links  ..The rem, or root em, is the font size of the root element of the document.*/
+    color: white;
+    text-decoration: none;
+}
+.main-nav{
+    text-align: center;
+    font-size: 1.1em;/*10% bigger*/
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255,255, .3);
+}
+.main-nav li{
+    padding:0 5%; /*0 top and bottom, 5% on left and right */
+    /*as the browser shrinks and expands it stays far*/
+}
+.nav a:hover{
+    background-color: rgba(255,255,255, .3);/*.3 is transparency ..light gray*/
+    /*when we hover over the elements we want to do something*/
+}
+.main-header{
+    background-color: rgba(0,0,0,.6);/*black*/
+    background-image: url("images/vinay.jpg");
+    background-blend-mode: multiply;/*as css can only use color or image we use blend*/
+    /*multiply combines these color and image*/
+    /*make sure everything is in line and not zig zag*/
+    background-size: cover; /*cover tells to expand as much as it can* until one of the borders is at its edge*/
+    padding-bottom: 30px;
+}
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+     font-family: "Booter-Zero Zero";
+     font-weight: normal;/*as h1 will be bold we dont want our text to be bold*/
+     color:white;
+}
+.band-name-large{
+    font-size: 4em;
+    /*display: inline-block;*/ /*using this here makes a problem when the browser becomes big*/
+}
+
+.content-section{
+    margin:1em; /*to distinguish from other elements*/
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;/*text in center*/
+    padding: 0 1 .5em;
+}
+.section-header{
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+.about-band-image{
+    float:center;
+    height: 200px;
+    width: 200px;
+    margin-left :30%;
+    border-radius: 50%;
+}
+.main-footer{
+    background-color: #56ccF2;
+    color:white;
+    padding: .25em 0 ; 
+}
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+.main-footer-container ul{
+    flex-grow:1;
+    text-align:end ;
+}
+
+.footer-nav li{
+    padding: 0 .5em;
+}
+.footer-nav img{
+    width:70px;
+    height:70px;
+}
+
+
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header{
+    margin: .5em 15% 2em 15%;
+    color:white;
+    border:2px soid #2D9CDB;
+           /*top   right bottom left*/
+    background-color: rgba(255, 255,255, .1);
+    border-radius: 0;/*how round the corners are*/
+    font-size: 1.5em ;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover{
+    background-color: rgba(255,255,255, .3);
+}
+
+.btn-play{
+    display: block;
+    color:#2D9CDB;
+    border: 2px solid #2D9CDB;
+    margin: 0 auto;/*only block elements can have auto margin*/
+    font-size:  2em;
+    border-radius: 50%;
+    padding: 0;
+    width:  100px;
+    height: 100px;
+}
+
+.tour-row{
+    border-bottom: 1px solid black;
+    padding-bottom : 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row :last-child{
+    border-bottom: none;/*to remove border of last tour*/
+}
+
+.tour-item{
+    display: inline-block;
+    padding-right: .5em;
+  /*  width: 1000px;*//*without inline it changea nothing*/
+    /*bu adding that it gives two lines*/
+}
+
+.tour-date{
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+}
+.tour-city{
+    width:20%;
+}
+.tour-arena{
+    width: 20%;
+}
+.tour-btn{
+    /*width: 19%;*//*becomes wider as screen increases*/
+    max-width: 19%;
+}
+.btn-primary{
+    color:white;
+    background-color: #56ccf2;
+    border:none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+.btn-primary:hover{
+    background-color: #2D9CDB;
+}
+
+.shop-item{
+    margin:30px;
+}
+.shop-item-title{
+    display:block; /*so the title is above image*/
+    width:100%;
+    text-align:center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image{
+    height: 250px;
+    width:200px;
+    border-color: rgba(22, 2, 2, 0.822);
+    border-style: solid;
+}
+.shop-item-details{
+    display: flex;/*to align them vertical of same height*/
+    align-items: center;
+    padding: 5px;
+}
+.shop-item-price{
+    flex-grow: 1;/*takes as much as space to next item*/
+    color: #333;
+}
+.shop-items{
+    display: flex;/*all in one line*/
+    flex-wrap: wrap;/*all extends sufficient to screen*/
+    justify-content: space-around;/*space evev on left and right*/
+
+}
+
+.cart-header{
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black ;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row{
+    display: flex;/*text will be in one line but not aligned without .cart-column "center"*/
+}
+.cart-item{
+    width: 45%;
+}
+
+.cart-price{
+    width: 20%;
+}
+.cart-quantity{
+    width: 35%;
+}
+
+.cart-item-title{
+    color:#333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image{
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger{
+    color:white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover{
+    background-color: #CC4C4C;
+}
+.cart-quantity-input{
+    height: 34px;
+    width: 50;
+    border-radius: 5px;
+    border: 1px solid #56ccF2;
+    background-color:  #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right:25px;
+}
+
+.cart-row:last-child{
+    border-bottom : 1px solid black;
+}
+
+.cart-row:last-child .cart-column{
+    border: none;
+}
+
+.cart-total{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.cart-total-title{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price{
+    color:#333;
+    font-size:1.1em;
+}
+
+.btn-purchase{
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
